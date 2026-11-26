@@ -17,7 +17,7 @@ MAX_QUESTIONS_PER_SESSION = 30  # protects your API budget
 HISTORY_MESSAGES = 12  # how much of the conversation the AI sees (so follow-up questions work)
 MAX_QUESTION_CHARS = 1000
 
-st.set_page_config(page_title="Migrant Worker Bot", page_icon="💬", layout="centered")
+st.set_page_config(page_title="Migrant Worker Support Bot", page_icon="💬", layout="centered")
 st.markdown(
     """<style>
     #MainMenu, footer {visibility: hidden;}
@@ -58,7 +58,7 @@ def show_feedback(msg_id):
 
 # ---------- Screen 1: choose a language ----------
 if ss.lang is None:
-    st.title("Migrant Worker Bot")
+    st.title("Migrant Worker Support Bot")
     st.write("Choose your language · மொழியைத் தேர்ந்தெடுக்கவும் · ভাষা বেছে নিন")
     for code, name in LANGUAGES.items():
         st.button(name, key=f"lang_{code}", on_click=choose_language, args=(code,), use_container_width=True)
@@ -66,7 +66,7 @@ if ss.lang is None:
 
 # ---------- Screen 2: chat ----------
 t = TEXT[ss.lang]
-st.title("Migrant Worker Bot")
+st.title("Migrant Worker Support Bot")
 st.error(t["emergency"])  # always visible, never depends on the AI
 st.caption(t["human"])
 st.button(f"🌐 {t['change_language']}", on_click=reset_language)

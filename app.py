@@ -17,7 +17,7 @@ MAX_QUESTIONS_PER_SESSION = 30  # protects your API budget
 HISTORY_MESSAGES = 12  # how much of the conversation the AI sees (so follow-up questions work)
 MAX_QUESTION_CHARS = 1000
 
-st.set_page_config(page_title="Catalyst Bot", page_icon="💬", layout="centered")
+st.set_page_config(page_title="Migrant Worker Bot", page_icon="💬", layout="centered")
 st.markdown(
     """<style>
     #MainMenu, footer {visibility: hidden;}

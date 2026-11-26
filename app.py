@@ -58,7 +58,7 @@ def show_feedback(msg_id):
 
 # ---------- Screen 1: choose a language ----------
 if ss.lang is None:
-    st.title("💬 Catalyst Bot")
+    st.title("Migrant Worker Bot")
     st.write("Choose your language · மொழியைத் தேர்ந்தெடுக்கவும் · ভাষা বেছে নিন")
     for code, name in LANGUAGES.items():
         st.button(name, key=f"lang_{code}", on_click=choose_language, args=(code,), use_container_width=True)
@@ -66,7 +66,7 @@ if ss.lang is None:
 
 # ---------- Screen 2: chat ----------
 t = TEXT[ss.lang]
-st.title("💬 Catalyst Bot")
+st.title("Migrant Worker Bot")
 st.error(t["emergency"])  # always visible, never depends on the AI
 st.caption(t["human"])
 st.button(f"🌐 {t['change_language']}", on_click=reset_language)
